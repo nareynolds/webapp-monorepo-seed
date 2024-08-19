@@ -13,4 +13,4 @@ First, an introduction...
 # What?
 
 # Topics
-[Publishing with Github Pages](*/publishing-with-github-pages)
+[Publishing with Github Pages](publishing-with-github-pages)
