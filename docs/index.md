@@ -1,5 +1,5 @@
 ---
-title: Webapps Monorepo Seed
+title: A Seed for Webapps Monorepos
 ---
 
 This repo is intended to be a jumping-off point for any future projects.
