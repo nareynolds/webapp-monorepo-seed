@@ -32,6 +32,7 @@
 			//"devPort": {},
 			// Specify which VS Code extensions to install (List of IDs)
 			"extensions": [
+				// Github Copilot
 				"GitHub.copilot"
 			]
 		}
