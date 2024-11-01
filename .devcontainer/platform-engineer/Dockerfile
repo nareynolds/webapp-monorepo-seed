@@ -4,6 +4,9 @@
 ARG VARIANT="ubuntu"
 FROM mcr.microsoft.com/vscode/devcontainers/base:${VARIANT}
 
-# [Optional] Uncomment this section to install additional OS packages.
-# RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-#     && apt-get -y install --no-install-recommends <your-package-list-here>
+# install additional OS packages.
+RUN apt-get update && \
+    # Install Volta for managing Node.js versions
+    curl https://get.volta.sh | bash && \
+    # Install Pulumi CLI for Infrastructure as Code
+    curl https://get.pulumi.com | bash
