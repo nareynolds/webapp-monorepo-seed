@@ -10,3 +10,6 @@ RUN sudo apt-get update && \
     curl https://get.volta.sh | bash && \
     # Install Pulumi CLI for Infrastructure as Code
     curl https://get.pulumi.com | bash
+
+# Add Volta and Pulumi to PATH
+ENV PATH="/root/.volta/bin:/root/.pulumi/bin:${PATH}"
