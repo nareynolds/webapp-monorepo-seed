@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
 {
-	"name": "Ubuntu",
+	"name": "Platform Engineer",
 	"build": {
 		// Use the Dockerfile defined in the same directory as this file
 		"dockerfile": "Dockerfile"
@@ -31,7 +31,9 @@
 			//"settings": {},
 			//"devPort": {},
 			// Specify which VS Code extensions to install (List of IDs)
-			"extensions": []
+			"extensions": [
+				"GitHub.copilot"
+			]
 		}
 	}
 }
