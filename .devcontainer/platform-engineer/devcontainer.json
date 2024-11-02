@@ -31,9 +31,9 @@
 		// },
 
 		// Install Volta for managing Node.js versions
-		"ghcr.io/enricosecondulfo/devcontainer-features/volta:1": {
-        	"version": "latest"
-    	},
+		// "ghcr.io/enricosecondulfo/devcontainer-features/volta:1": {
+        // 	"version": "latest"
+    	// },
 		
 		// Install Pulumi for managing cloud infrastructure
 		"ghcr.io/devcontainers-contrib/features/pulumi:1": {
