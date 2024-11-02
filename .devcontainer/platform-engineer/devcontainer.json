@@ -4,7 +4,11 @@
 	"name": "Platform Engineer",
 	"build": {
 		// Use the Dockerfile defined in the same directory as this file
-		"dockerfile": "Dockerfile"
+		"dockerfile": "Dockerfile",
+
+		// Update 'VARIANT' arg in the Dockerfile to pick an Ubuntu version: jammy / ubuntu-22.04, focal / ubuntu-20.04, bionic /ubuntu-18.04
+		// Use ubuntu-22.04 or ubuntu-18.04 on local arm64/Apple Silicon.
+		"args": { "VARIANT": "ubuntu-22.04" }
 	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
@@ -27,7 +31,9 @@
 		// },
 
 		// Install Volta for managing Node.js versions
-		"ghcr.io/enricosecondulfo/devcontainer-features/volta:1": {},
+		"ghcr.io/enricosecondulfo/devcontainer-features/volta:1": {
+        	"version": "latest"
+    	},
 		
 		// Install Pulumi for managing cloud infrastructure
 		"ghcr.io/devcontainers-contrib/features/pulumi:1": {
