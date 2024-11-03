@@ -53,7 +53,10 @@
 			// Specify which VS Code extensions to install (List of IDs)
 			"extensions": [
 				// Github Copilot
-				"GitHub.copilot"
+				"GitHub.copilot",
+
+				// Docker
+				"ms-azuretools.vscode-docker"
 			]
 		}
 	}
