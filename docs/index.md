@@ -13,4 +13,5 @@ First, an introduction...
 # What?
 
 # Topics
-[Publishing with Github Pages](publishing-with-github-pages)
+[Publishing with Github Pages](publishing_with_github_pages)
+[Developing with Github Codespaces](developing_with_github_codespaces)
