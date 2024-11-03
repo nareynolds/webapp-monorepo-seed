@@ -6,5 +6,8 @@ FROM mcr.microsoft.com/vscode/devcontainers/base:${VARIANT}
 # Install Volta for managing Node.js versions. It needs to be moved to the user's home directory to work.
 RUN sudo apt-get update && \
     curl https://get.volta.sh | bash && \
-    mv /root/.volta /home/vscode/
-ENV PATH "$PATH:/home/vscode/.volta/bin"
+    mv /root/.volta /home/vscode/ && \
+    chown -R vscode:vscode /home/vscode/.volta  && \
+    chmod -R u=rwx /home/vscode/.volta
+
+ENV PATH "${PATH}:/home/vscode/.volta/bin"
