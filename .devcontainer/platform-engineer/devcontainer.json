@@ -25,9 +25,9 @@
 		},
 
 		// Install Nx CLI for managing monorepos
-		"ghcr.io/balazs23/devcontainers-features/nx:1": {
-			"version": "latest"
-		}
+		// "ghcr.io/balazs23/devcontainers-features/nx:1": {
+		// 	"version": "latest"
+		// }
 
 		// The existing Volta feature didn't work, so it is installed via the Dockerfile
 	},
