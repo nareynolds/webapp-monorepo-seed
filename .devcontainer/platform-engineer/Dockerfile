@@ -3,9 +3,11 @@
 ARG VARIANT="ubuntu"
 FROM mcr.microsoft.com/vscode/devcontainers/base:${VARIANT}
 
-# Install Volta for managing Node.js versions. It needs to be moved to the user's home directory to work.
+# Switching to the user who will be using the container.
 USER vscode
-RUN curl https://get.volta.sh | bash && \
-    curl -fsSL https://get.pulumi.com | bash
 
+# Install Volta for managing Node.js versions.
+RUN curl https://get.volta.sh | bash
+
+# Switching back to root, just in case
 USER root
