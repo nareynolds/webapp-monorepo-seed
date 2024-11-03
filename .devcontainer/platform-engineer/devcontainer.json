@@ -19,10 +19,10 @@
 		},
 
 		// Install Pulumi for managing cloud infrastructure
-		"ghcr.io/devcontainers-contrib/features/pulumi:1": {
-			"version": "latest",
-			"bashCompletion": true
-		},
+		// "ghcr.io/devcontainers-contrib/features/pulumi:1": {
+		// 	"version": "latest",
+		// 	"bashCompletion": true
+		// },
 
 		// Install Nx CLI for managing monorepos
 		// "ghcr.io/balazs23/devcontainers-features/nx:1": {
