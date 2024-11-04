@@ -7,7 +7,8 @@ FROM mcr.microsoft.com/vscode/devcontainers/base:${VARIANT}
 USER vscode
 
 # Install Volta for managing Node.js versions.
-RUN curl https://get.volta.sh | bash
+RUN curl https://get.volta.sh | bash && \
+    volta install node@22
 
 # Switching back to root, just in case
 USER root
