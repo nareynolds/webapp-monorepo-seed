@@ -8,7 +8,7 @@
 
 		// Update 'VARIANT' arg in the Dockerfile to pick an Ubuntu version: jammy / ubuntu-22.04, focal / ubuntu-20.04, bionic /ubuntu-18.04
 		// Use ubuntu-22.04 or ubuntu-18.04 on local arm64/Apple Silicon.
-		"args": { "VARIANT": "ubuntu-22.04", "REMOTE_USER": "vscode" }
+		"args": { "VARIANT": "ubuntu-22.04" }
 	},
 
 	// Configure tool-specific properties.
@@ -53,8 +53,10 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
+	// ASSUMPTION: the remote user is `vscode`
 	"postCreateCommand": "bash /home/vscode/postCreateCommand.sh",
 
 	// Connect as the `vscode` user. More info: https://aka.ms/dev-containers-non-root.
+	// CAUTION: the remote user, `vscode`, is assumed in many places.
 	"remoteUser": "vscode"
 }
