@@ -53,7 +53,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "volta install node@22",
+	"postCreateCommand": "bash postCreateCommand.sh",
 
 	// Connect as the `vscode` user. More info: https://aka.ms/dev-containers-non-root.
 	"remoteUser": "vscode"

@@ -4,4 +4,4 @@
 volta install node@22
 
 # Install PNPM
-volta install pnpm@6
+volta install pnpm
