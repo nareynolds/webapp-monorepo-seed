@@ -22,8 +22,14 @@
 				// Github Copilot
 				"GitHub.copilot",
 
+				// Github Actions
+				"GitHub.vscode-github-actions",
+
 				// Docker
-				"ms-azuretools.vscode-docker"
+				"ms-azuretools.vscode-docker",
+
+				// Nx Console
+				"nrwl.angular-console"
 			]
 		}
 	},
