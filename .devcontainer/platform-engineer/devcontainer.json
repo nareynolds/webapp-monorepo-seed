@@ -11,39 +11,6 @@
 		"args": { "VARIANT": "ubuntu-22.04" }
 	},
 
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	"features": {
-		// Install the AWS CLI
-		"ghcr.io/devcontainers/features/aws-cli:1": {
-			"version": "latest"
-		},
-
-		// Install Pulumi for managing cloud infrastructure
-		"ghcr.io/devcontainers-contrib/features/pulumi:1": {
-			"version": "latest",
-			"bashCompletion": true
-		},
-
-		// Install Nx CLI for managing monorepos
-		// "ghcr.io/balazs23/devcontainers-features/nx:1": {
-		// 	"version": "latest"
-		// }
-
-		// The existing Volta feature didn't work, so it is installed via the Dockerfile
-	},
-
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
-
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "uname -a",
-
-	// Configure tool-specific properties.
-	// "customizations": {},
-
-	// Connect as the `vscode` user. More info: https://aka.ms/dev-containers-non-root.
-	"remoteUser": "vscode",
-
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
@@ -59,5 +26,35 @@
 				"ms-azuretools.vscode-docker"
 			]
 		}
-	}
+	},
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	"features": {
+		// Install the AWS CLI
+		"ghcr.io/devcontainers/features/aws-cli:1": {
+			"version": "latest"
+		},
+
+		// Install Pulumi for managing cloud infrastructure
+		"ghcr.io/devcontainers-contrib/features/pulumi:1": {
+			"version": "latest",
+			"bashCompletion": true
+		}
+
+		// Install Nx CLI for managing monorepos
+		// "ghcr.io/balazs23/devcontainers-features/nx:1": {
+		// 	"version": "latest"
+		// }
+
+		// The existing Volta feature didn't work, so it is installed via the Dockerfile
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "volta install node@22",
+
+	// Connect as the `vscode` user. More info: https://aka.ms/dev-containers-non-root.
+	"remoteUser": "vscode"
 }
