@@ -29,7 +29,10 @@
 				"ms-azuretools.vscode-docker",
 
 				// Nx Console
-				"nrwl.angular-console"
+				"nrwl.angular-console",
+
+				// Prettier
+				"esbenp.prettier-vscode"
 			]
 		}
 	},
