@@ -3,6 +3,9 @@
 ARG VARIANT="ubuntu"
 FROM mcr.microsoft.com/vscode/devcontainers/base:${VARIANT}
 
+# copy the postCreateCommand.sh script for execution after the container is created
+COPY postCreateCommand.sh /home/vscode/postCreateCommand.sh
+
 # Switching to the user who will be using the container.
 USER vscode
 

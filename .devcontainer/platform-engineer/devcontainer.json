@@ -31,15 +31,15 @@
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
 		// Install the AWS CLI
-		"ghcr.io/devcontainers/features/aws-cli:1": {
-			"version": "latest"
-		},
+		// "ghcr.io/devcontainers/features/aws-cli:1": {
+		// 	"version": "latest"
+		// },
 
 		// Install Pulumi for managing cloud infrastructure
-		"ghcr.io/devcontainers-contrib/features/pulumi:1": {
-			"version": "latest",
-			"bashCompletion": true
-		}
+		// "ghcr.io/devcontainers-contrib/features/pulumi:1": {
+		// 	"version": "latest",
+		// 	"bashCompletion": true
+		// }
 
 		// Install Nx CLI for managing monorepos
 		// "ghcr.io/balazs23/devcontainers-features/nx:1": {
@@ -53,7 +53,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "bash ./postCreateCommand.sh",
+	"postCreateCommand": "bash /home/vscode/postCreateCommand.sh",
 
 	// Connect as the `vscode` user. More info: https://aka.ms/dev-containers-non-root.
 	"remoteUser": "vscode"
