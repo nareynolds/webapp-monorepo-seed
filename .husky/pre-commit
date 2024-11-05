@@ -1,5 +1,8 @@
 # format everything
 pnpx nx format
 
+# lint changed project
+pnpx nx affected --target=lint
+
 # add changes to this commit
 git add .
