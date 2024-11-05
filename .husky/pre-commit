@@ -1,13 +1,1 @@
-#!/bin/bash
-
-# Exit immediately if a command exits with a non-zero status.
-set -e  
-
-# format everything
-pnpx nx format
-
-# lint, test, build changed project
-pnpx nx affected -t lint test build
-
-# add changes to this commit
-git add .
+pnpx nx format && pnpx nx affected -t build && git add .
