@@ -4,20 +4,26 @@ See the detailed explanations of this repo at https://nareynolds.github.io/webap
 
 ## Formatting
 
-Run `pnpx nx format` to build all projects.
+Run `pnpm format` to build all projects.
 
 ## Linting
 
-Run `pnpx nx run-many --target=lint --all` to lint all projects.
+Run `pnpm lint` to lint all projects.
 
 ## Building
 
-Run `pnpx nx run-many --target=build --all` to build all projects.
+Run `pnpm build` to build all projects.
 
-## Running unit tests
+## Unit Testing
 
-Run `pnpx nx run-many --target=build --all` to execute the unit tests for all projects.
+Run `pnpm test` to execute the unit tests for all projects.
 
 ## View Project Graph
 
 Run `pnpx nx graph` to execute the unit tests for all projects.
+
+## Developing
+
+## Adding a new "dev" dependency
+
+Run `pnpm add -w -D <package>` to install `<package>` as a devDependency.
