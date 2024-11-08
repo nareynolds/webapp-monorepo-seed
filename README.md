@@ -30,6 +30,6 @@ Run `pnpm add -w -D <package>` to install `<package>` as a devDependency.
 
 ## Import one workspace package (dependency) into another (dependent)
 
-First, add the dependency the dependent's package.json: `pnpm add @webapp-monorepo-seed/<dependency> --filter <dependent> --workspace`.
+First, add the dependency the dependent's package.json: `pnpm add @webapp-monorepo-seed/<dependency> --filter <dependent> --workspace`. Then, make sure the package.json's version is set to `*`.
 
 Then, import it in the dependent's file as follows: `import { <whatever> } from '@webapp-monorepo-seed/<dependency>';`
