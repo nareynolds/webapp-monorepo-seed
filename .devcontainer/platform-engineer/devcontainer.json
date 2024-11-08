@@ -1,71 +1,68 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
 {
-	"name": "Platform Engineer",
-	"build": {
-		// Use the Dockerfile defined in the same directory as this file
-		"dockerfile": "Dockerfile",
+  "name": "Platform Engineer",
+  "build": {
+    // Use the Dockerfile defined in the same directory as this file
+    "dockerfile": "Dockerfile",
 
-		// Update 'VARIANT' arg in the Dockerfile to pick an Ubuntu version: jammy / ubuntu-22.04, focal / ubuntu-20.04, bionic /ubuntu-18.04
-		// Use ubuntu-22.04 or ubuntu-18.04 on local arm64/Apple Silicon.
-		"args": { "VARIANT": "ubuntu-22.04" }
-	},
+    // Update 'VARIANT' arg in the Dockerfile to pick an Ubuntu version: jammy / ubuntu-22.04, focal / ubuntu-20.04, bionic /ubuntu-18.04
+    // Use ubuntu-22.04 or ubuntu-18.04 on local arm64/Apple Silicon.
+    "args": { "VARIANT": "ubuntu-22.04" }
+  },
 
-	// Configure tool-specific properties.
-	"customizations": {
-		// Configure properties specific to VS Code.
-		"vscode": {
-			//"settings": {},
-			//"devPort": {},
-			// Specify which VS Code extensions to install (List of IDs)
-			"extensions": [
-				// Github Copilot
-				"GitHub.copilot",
+  // Configure tool-specific properties.
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      //"settings": {},
+      //"devPort": {},
+      // Specify which VS Code extensions to install (List of IDs)
+      "extensions": [
+        // Github Copilot
+        "GitHub.copilot",
 
-				// Github Actions
-				"GitHub.vscode-github-actions",
+        // Github Actions
+        "GitHub.vscode-github-actions",
 
-				// Docker
-				"ms-azuretools.vscode-docker",
+        // Docker
+        "ms-azuretools.vscode-docker",
 
-				// Nx Console
-				"nrwl.angular-console",
+        // Nx Console
+        "nrwl.angular-console",
 
-				// Prettier
-				"esbenp.prettier-vscode"
-			]
-		}
-	},
+        // Prettier
+        "esbenp.prettier-vscode"
+      ]
+    }
+  },
 
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	"features": {
-		// Install the AWS CLI
-		// "ghcr.io/devcontainers/features/aws-cli:1": {
-		// 	"version": "latest"
-		// },
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  "features": {
+    // Install the AWS CLI
+    "ghcr.io/devcontainers/features/aws-cli:1": {
+      "version": "latest"
+    },
 
-		// Install Pulumi for managing cloud infrastructure
-		// "ghcr.io/devcontainers-contrib/features/pulumi:1": {
-		// 	"version": "latest",
-		// 	"bashCompletion": true
-		// }
+    // Install Pulumi for managing cloud infrastructure
+    "ghcr.io/devcontainers-contrib/features/pulumi:1": {
+      "version": "latest",
+      "bashCompletion": true
+    }
 
-		// Install Nx CLI for managing monorepos
-		// "ghcr.io/balazs23/devcontainers-features/nx:1": {
-		// 	"version": "latest"
-		// }
+    // Not installing the Nx CLI to force use of the locally installed version
 
-		// The existing Volta feature didn't work, so it is installed via the Dockerfile
-	},
+    // The existing Volta feature didn't work, so it is installed via the Dockerfile
+  },
 
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
 
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// ASSUMPTION: the remote user is `vscode`
-	"postCreateCommand": "bash /home/vscode/postCreateCommand.sh",
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // ASSUMPTION: the remote user is `vscode`
+  "postCreateCommand": "bash /home/vscode/postCreateCommand.sh",
 
-	// Connect as the `vscode` user. More info: https://aka.ms/dev-containers-non-root.
-	// CAUTION: the remote user, `vscode`, is assumed in many places.
-	"remoteUser": "vscode"
+  // Connect as the `vscode` user. More info: https://aka.ms/dev-containers-non-root.
+  // CAUTION: the remote user, `vscode`, is assumed in many places.
+  "remoteUser": "vscode"
 }
