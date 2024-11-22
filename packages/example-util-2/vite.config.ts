@@ -3,6 +3,7 @@ import { defineConfig } from 'vite';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import { nxCopyAssetsPlugin } from '@nx/vite/plugins/nx-copy-assets.plugin';
 
+// eslint-disable-next-line @typescript-eslint/no-unsafe-call
 export default defineConfig({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/packages/example-util-2',

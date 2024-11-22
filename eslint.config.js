@@ -1,35 +1,40 @@
 const nx = require('@nx/eslint-plugin');
-// const eslint = require('@eslint/js');
-// const tseslint = require('typescript-eslint');
+const tseslint = require('typescript-eslint');
 
 module.exports = [
   ...nx.configs['flat/base'],
   ...nx.configs['flat/typescript'],
   ...nx.configs['flat/javascript'],
 
-  // TODO: figure out how to add the following rules
-  // Add the most strict rules provided by https://typescript-eslint.io/getting-started/typed-linting/
-  // ...tseslint.config(
-  //   eslint.configs.recommended,
-  //   ...tseslint.configs.strictTypeChecked,
-  //   ...tseslint.configs.stylisticTypeChecked,
-  //   {
-  //     languageOptions: {
-  //       parser: tseslint.parser,
-  //       parserOptions: {
-  //         projectService: true,
-  //         tsconfigRootDir: import.meta.dirname,
-  //       },
-  //     },
-  //   },
-  // ),
+  // Add the most strict rules provided by TS ESLint https://typescript-eslint.io/getting-started/typed-linting/
+  // NOTE: the "recommneded" rules are already included in the base Nx configs
+  ...tseslint.configs.strictTypeChecked.map((config) => ({
+    ...config,
+    files: ['**/*.ts'],
+    languageOptions: {
+      parser: tseslint.parser,
+      parserOptions: {
+        projectService: true,
+      },
+    },
+  })),
+  ...tseslint.configs.stylisticTypeChecked.map((config) => ({
+    ...config,
+    files: ['**/*.ts'],
+    languageOptions: {
+      parser: tseslint.parser,
+      parserOptions: {
+        projectService: true,
+      },
+    },
+  })),
 
   // Ignore the dist folder
   {
     ignores: ['**/dist'],
   },
 
-  //
+  // Nx's boundary rules
   {
     files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
     rules: {
